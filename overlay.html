@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream_AudioStat</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .overlay {
+            margin: 0;
+            padding: 0;
+            padding-right: 20px;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .scroll-container {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        .scroll-container.scrolling {
+            animation: scroll-left 20s linear infinite;
+            will-change: transform;
+        }
+
+        .content-wrapper {
+            display: inline-flex;
+            align-items: center;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .overlay span {
+            color: white;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .mid {
+            padding: 0 10px;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="scroll-container" id="scrollContainer">
+            <div class="content-wrapper">
+                <span class="title" id="title">Waiting for media...</span>
+                <span class="mid"> | </span>
+                <span class="artist" id="artist">—</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const overlay = document.getElementById('overlay');
+        const scrollContainer = document.getElementById('scrollContainer');
+        const titleEl = document.getElementById('title');
+        const artistEl = document.getElementById('artist');
+
+        function updateScrolling() {
+            const overlayWidth = overlay.offsetWidth;
+            const contentWidth = scrollContainer.firstElementChild.scrollWidth;
+            
+            // Remove scrolling class and clear container
+            scrollContainer.classList.remove('scrolling');
+            scrollContainer.innerHTML = '';
+            
+            // Create the original content
+            const wrapper = document.createElement('div');
+            wrapper.className = 'content-wrapper';
+            wrapper.innerHTML = `
+                <span class="title">${titleEl.getAttribute('data-original-text') || titleEl.textContent}</span>
+                <span class="mid"> | </span>
+                <span class="artist">${artistEl.getAttribute('data-original-text') || artistEl.textContent}</span>
+            `;
+            scrollContainer.appendChild(wrapper);
+            
+            // Check if content overflows
+            if (wrapper.scrollWidth > overlayWidth) {
+                // Create duplicate for seamless loop
+                const duplicate = wrapper.cloneNode(true);
+                duplicate.style.marginLeft = '80px';
+                scrollContainer.appendChild(duplicate);
+                
+                // Start animation
+                setTimeout(() => {
+                    scrollContainer.classList.add('scrolling');
+                }, 50);
+            }
+        }
+
+        function updateText(title, artist) {
+            // Store original text
+            titleEl.setAttribute('data-original-text', title);
+            artistEl.setAttribute('data-original-text', artist);
+            titleEl.textContent = title;
+            artistEl.textContent = artist;
+            
+            // Wait for DOM update, then check if scrolling is needed
+            setTimeout(updateScrolling, 100);
+        }
+
+        function connectWebSocket() {
+            const ws = new WebSocket('ws://localhost:8765');
+
+            ws.onopen = () => {
+                console.log('Connected to media server');
+            };
+
+            ws.onmessage = (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    
+                    if (data.title === '') {
+                        updateText('Nothing is playing', '—');
+                        overlay.classList.remove('active');
+                    } else {
+                        updateText(data.title || 'Unknown Title', data.artist || 'Unknown Artist');
+                        overlay.classList.add('active');
+                    }
+                } catch (error) {
+                    console.error('Error parsing message:', error);
+                }
+            };
+
+            ws.onerror = () => {
+                console.error('WebSocket error');
+            };
+
+            ws.onclose = () => {
+                console.log('Disconnected from media server');
+                setTimeout(connectWebSocket, 3000);
+            };
+        }
+
+        // Connect on page load
+        connectWebSocket();
+
+        // Recheck scrolling on window resize
+        window.addEventListener('resize', updateScrolling);
+    </script>
+</body>
+</html>

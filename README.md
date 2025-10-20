@@ -1,2 +1,45 @@
-# audiostat
-An OPEN-SOURCE overlay that shows the audio currently playing via winrt's API made with HTLM, JS and Python
+# Audiostats
+
+An OPEN-SOURCE overlay that shows the audio currently playing via winrt's API made with HTLM, JS and Python.
+It probably needs some improvements so feel free to contribute and help !
+
+
+## About
+
+Audiostats works by having a websocket ran by a python script. 
+The scripts comunicates with winrt's API and gets infos about the media currently playing.
+The HTML file then listens to that websockets and displays the title and artist of the media playing.
+Most of the HTML/JS were made using AI so it need lots of improvement that i'll add overtime if i find the time!
+
+
+## How to use
+(I'll use the case of peoples like me that wants it to run in OBS)
+
+1. Make a new Browser source
+2. link the path to overlay.html : ```file:\\\Path\To\Your\File\overlay.html```
+3. run ```audiostat.exe``` OR ```python audiostat.py``` 
+4. the next media you play should send title \ artist into the overlay !
+
+### Requirments
+
+Things that I needed to install are in ```src/requirements.txt```.
+here's a list of all libraries used :
+
+- winrt (```1.0.21033.1``` is the version I use)
+- websockets (```11.0.3``` is the version I use)
+- asyncio (came with my conda environement, don't think it needs/should be installed with pip)
+- json (came with my conda environement, don't think it needs/should be installed with pip)
+
+
+## More
+
+Feel free to help improve the project !
+If you have requests I might be able to help, keep in mind that I'm not good at this though !
+
+---
+
+*This project is licensed under the GPL-3.0 License - see the LICENSE file for details.*
+
+
+
+*Last updated: 10/21/2025*

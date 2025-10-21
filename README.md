@@ -32,7 +32,7 @@ need help [Installing python](#python_install) ?
 
 1. Make a new Browser source
 2. link the path to overlay.html : ```file:\\\Path\To\Your\File\overlay.html```
-3. run ```audiostat.exe``` OR ```python audiostat.py``` 
+3. run ```python audiostat.py``` in the audiostat/src folder or [Make a .exe](#make_exe) 
 4. the next media you play should send title \ artist into the overlay !
 
 ### help
@@ -49,6 +49,7 @@ I personally used conda for this app since it runs on my windows computer and I 
 5. run ```conda activate envname```
 6. navigate to the audiostat file by running ```cd path\to\audiostat``` (first run ```driveletter:``` if downloaded on a separate drive)
 7. run ```pip install -r src/requirements.txt```
+8. run ```python src/audiostat.py``` to test if your install works
 
 ### <div id="make_exe"></div>
 ### make a .exe
@@ -71,5 +72,6 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 

@@ -27,6 +27,7 @@ async def make_session():
 	try:
 		sessions = await MediaManager.request_async()
 	except:
+		print("error making session")
 		return None
 	return sessions
 
@@ -52,7 +53,7 @@ async def broadcast_media(media_info):
 				dead_clients.add(client)
 		connected_clients.difference_update(dead_clients)
 
-async def handler(websocket, path):
+async def handler(websocket):
 	connected_clients.add(websocket)
 	try:
 		async for message in websocket:
@@ -79,9 +80,7 @@ async def main():
 			try:
 				if sessions is None:
 					sessions = await make_session()
-				
 				current_song = await check_media(sessions)
-				
 				if current_song is not None and current_song["title"] != last_song:
 					last_song = current_song["title"]
 					if current_song["title"] == "":

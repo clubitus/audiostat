@@ -13,9 +13,7 @@ The HTML file then listens to that websockets and displays the title and artist 
 Most of the HTML/JS were made using AI so it need lots of improvement that i'll add overtime if i find the time!</p>
 
 
-## Modify the program
-
-### Requirments
+## Requirements to modify the program
 
 The program runs with python 3.9.x it wont work with another version
 
@@ -37,6 +35,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

@@ -15,7 +15,15 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
 
 
 ## How to use
-(I'll use the case of peoples like me that wants it to run in OBS)
+
+If you don't trust my .exe OR brought additions to the .py script you can compile ```audiostat.py``` yourself using pyInstaller :
+
+1. run ```pip install pyinstaller``` 
+2. run ```pyinstaller -F src/audiostat.py``` inside the main folder
+
+( -F makes it so it compiles everything into a single file ! )
+
+### obs-studio
 
 1. Make a new Browser source
 2. link the path to overlay.html : ```file:\\\Path\To\Your\File\overlay.html```
@@ -46,3 +54,4 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+

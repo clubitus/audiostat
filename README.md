@@ -14,7 +14,7 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
 
 ## How to use 
 
-1. Download latest release : ![alt text](Readme-assets\Screenshot_9.png "Title")
+1. Download latest release : ![alt text](Readme-assets/Screenshot_9.png "Title")
 2. 
 3. 
 ## Requirements to modify the program
@@ -39,6 +39,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

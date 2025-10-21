@@ -1,5 +1,7 @@
 # Audiostats
 
+A cool OBS music overlay !
+
 An OPEN-SOURCE overlay that shows the audio currently playing via winrt's API made with HTLM, JS and Python.
 It probably needs some improvements so feel free to contribute and help !
 
@@ -39,6 +41,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 ---
 
 *This project is licensed under the GPL-3.0 License - see the LICENSE file for details.*
+
 
 
 

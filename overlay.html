@@ -82,15 +82,14 @@
         const titleEl = document.getElementById('title');
         const artistEl = document.getElementById('artist');
 
+        // Adds the scrolling effect to the text if needed
         function updateScrolling() {
             const overlayWidth = overlay.offsetWidth;
             const contentWidth = scrollContainer.firstElementChild.scrollWidth;
             
-            // Remove scrolling class and clear container
             scrollContainer.classList.remove('scrolling');
             scrollContainer.innerHTML = '';
             
-            // Create the original content
             const wrapper = document.createElement('div');
             wrapper.className = 'content-wrapper';
             wrapper.innerHTML = `
@@ -100,31 +99,29 @@
             `;
             scrollContainer.appendChild(wrapper);
             
-            // Check if content overflows
             if (wrapper.scrollWidth > overlayWidth) {
-                // Create duplicate for seamless loop
                 const duplicate = wrapper.cloneNode(true);
                 duplicate.style.marginLeft = '80px';
                 scrollContainer.appendChild(duplicate);
                 
-                // Start animation
                 setTimeout(() => {
                     scrollContainer.classList.add('scrolling');
                 }, 50);
             }
         }
 
+        // Changes the text 
         function updateText(title, artist) {
-            // Store original text
             titleEl.setAttribute('data-original-text', title);
             artistEl.setAttribute('data-original-text', artist);
             titleEl.textContent = title;
             artistEl.textContent = artist;
             
-            // Wait for DOM update, then check if scrolling is needed
             setTimeout(updateScrolling, 100);
         }
 
+        // Connects and Listens to the Websocket on load 
+        // Also checks for a window resize and checks if scrolling is needed
         function connectWebSocket() {
             const ws = new WebSocket('ws://localhost:8765');
 
@@ -158,10 +155,7 @@
             };
         }
 
-        // Connect on page load
         connectWebSocket();
-
-        // Recheck scrolling on window resize
         window.addEventListener('resize', updateScrolling);
     </script>
 </body>

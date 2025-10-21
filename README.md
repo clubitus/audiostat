@@ -14,9 +14,10 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
 
 ## How to use 
 
-1. Download latest release : ![alt text](Readme-assets/Screenshot_9.png "Title")
-2. 
-3. 
+1. Download latest release ![alt text](Readme-assets/Screenshot_9.png "Title")
+2. Unzip file ![alt text](Readme-assets/Screenshot_1.png "Title")
+3. Add source in obs (i recommend W:200 H:50 for browser size) ![alt text](Readme-assets/Screenshot_2.png "Title") ![alt text](Readme-assets/Screenshot_3.png "Title") ![alt text](Readme-assets/Screenshot_4.png "Title") 
+   
 ## Requirements to modify the program
 
 The program runs with python 3.9.x it wont work with another version
@@ -39,6 +40,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

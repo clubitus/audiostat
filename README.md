@@ -35,7 +35,7 @@ need help [Installing python](#python_install) ?
 3. run ```python audiostat.py``` in the audiostat/src folder or [Make a .exe](#make_exe) 
 4. the next media you play should send title \ artist into the overlay !
 
-### help
+### Help
 
 ### <div id="python_install"></div>
 ### install python
@@ -54,7 +54,7 @@ I personally used conda for this app since it runs on my windows computer and I 
 ### <div id="make_exe"></div>
 ### make a .exe
 
-If you want a ```.exe```  you can do this using pyInstaller :
+to make a .exe :
 
 1. run ```pip install pyinstaller``` 
 2. run ```pyinstaller -F src/audiostat.py``` inside the main folder
@@ -72,6 +72,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

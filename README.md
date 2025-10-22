@@ -13,7 +13,7 @@ The HTML file then listens to that websockets and displays the title and artist 
 Most of the HTML/JS were made using AI so it need lots of improvement that i'll add overtime if i find the time!</p>
 
 ## How to use 
-
+<p>
 1. Download latest release ![alt text](Readme-assets/Screenshot_9.png "Title")
 2. Unzip file
 ![alt text](Readme-assets/Screenshot_1.png "Title")
@@ -23,6 +23,8 @@ select browser
 ![alt text](Readme-assets/Screenshot_3.png "Title") 
 put file link and browser size (i recommend W:200 H:50 for browser size) 
 ![alt text](Readme-assets/Screenshot_4.png "Title") 
+
+</p>
    
 ## Requirements to modify the program
 
@@ -46,6 +48,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

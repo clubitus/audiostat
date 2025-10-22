@@ -44,7 +44,7 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
    
    ![Defender Bypass Screenshot](Readme-assets/Screenshot_7.png "Defender Bypass")
 
-8. This should be what you see when you run the program. Now if you play a new media, the OBS source should display the name and the artist.
+8. This should be what you see when you run the program (different title and artist OBVIOUSLY). Now if you play a new media, the OBS source should display the name and the artist.
    
    ![Program Running Screenshot](Readme-assets/Screenshot_8.png "Program Running")
    
@@ -73,6 +73,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

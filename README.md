@@ -12,6 +12,8 @@ The scripts comunicates with winrt's API and gets infos about the media currentl
 The HTML file then listens to that websockets and displays the title and artist of the media playing.<br>
 Most of the HTML/JS were made using AI so it need lots of improvement that i'll add overtime if i find the time!</p>
 
+Here's how it looks when title / artist size is short enough for it to be static :
+
 ![Example Screenshot](Readme-assets/example.png "Example")
 
 ## How to use 
@@ -75,6 +77,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

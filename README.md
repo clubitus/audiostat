@@ -14,7 +14,7 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
 
 Here's how it looks when title / artist size is short enough for it to be static :
 
-![Example Screenshot](Readme-assets/example.png "Example")
+![Example Screenshot](Readme-assets/example1.png "Example")
 
 ## How to use 
 
@@ -77,6 +77,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

@@ -14,15 +14,15 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
 
 ## How to use 
 
-1. Download latest release ![<img src="image.png" width="250"/>](Readme-assets/Screenshot_9.png "Title")
+1. Download latest release ![<img src="image.png" width="50"/>](Readme-assets/Screenshot_9.png "Title")
 2. Unzip file
-![<img src="image.png" width="250"/>](Readme-assets/Screenshot_1.png "Title")
+![<img src="image.png" width="50"/>](Readme-assets/Screenshot_1.png "Title")
 4. Add new source in obs 
-![<img src="image.png" width="250"/>](Readme-assets/Screenshot_2.png "Title")
+![<img src="image.png" width="50"/>](Readme-assets/Screenshot_2.png "Title")
 select browser
-![<img src="image.png" width="250"/>](Readme-assets/Screenshot_3.png "Title") 
+![<img src="image.png" width="50"/>](Readme-assets/Screenshot_3.png "Title") 
 put file link and browser size (i recommend W:200 H:50 for browser size) 
-![<img src="image.png" width="250"/>](Readme-assets/Screenshot_4.png "Title") 
+![<img src="image.png" width="50"/>](Readme-assets/Screenshot_4.png "Title") 
 
    
 ## Requirements to modify the program
@@ -47,6 +47,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

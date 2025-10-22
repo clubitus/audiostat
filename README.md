@@ -34,18 +34,19 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
    
    ![Browser Settings Screenshot](Readme-assets/Screenshot_4.png "Browser Settings")
 
-6. run audiostat.exe
+6. Run audiostat.exe
    
-   ![Browser Settings Screenshot](Readme-assets/Screenshot_5.png "Browser Settings")
+   ![Run Program Screenshot](Readme-assets/Screenshot_5.png "Run Program")
 
-7. windows defender will probably flag it, here's the bypass :
+7. Windows Defender will probably flag it, here's the bypass:
    
-   ![Browser Settings Screenshot](Readme-assets/Screenshot_6.png "Browser Settings")
-   ![Browser Settings Screenshot](Readme-assets/Screenshot_7.png "Browser Settings")
+   ![Defender Warning Screenshot](Readme-assets/Screenshot_6.png "Defender Warning")
+   
+   ![Defender Bypass Screenshot](Readme-assets/Screenshot_7.png "Defender Bypass")
 
-8. This should be what you see when you run the program, now if you play a new media, the obs source should display the name and the artist
-
-   ![Browser Settings Screenshot](Readme-assets/Screenshot_8.png "Browser Settings")
+8. This should be what you see when you run the program. Now if you play a new media, the OBS source should display the name and the artist.
+   
+   ![Program Running Screenshot](Readme-assets/Screenshot_8.png "Program Running")
    
    
 
@@ -72,6 +73,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

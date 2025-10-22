@@ -53,7 +53,7 @@ Most of the HTML/JS were made using AI so it need lots of improvement that i'll 
    
 ## Requirements to modify the program
 
-The program runs with python 3.9.x it wont work with another version
+The program runs with python 3.9.x it wont work with another version and the ".exe" is compiled with Pyinstaller
 
 here's a list of all libraries used :
 
@@ -73,6 +73,7 @@ If you have requests I might be able to help, keep in mind that I'm not good at 
 
 
 *Last updated: 10/21/2025*
+
 
 
 

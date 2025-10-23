@@ -1,82 +1,105 @@
 # Audiostats
 
-<p>A cool OBS music overlay !<br>
-An OPEN-SOURCE overlay that shows the audio currently playing via winrt's API made with HTLM, JS and Python.<br>
-It probably needs some improvements so feel free to contribute and help !
-</p>
+![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9.x-blue.svg)
+![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)
 
-## About
+A customizable OBS music overlay that displays currently playing media information in real-time using Windows' native media API.
 
-<p>Audiostats works by having a websocket ran by a python script.<br>
-The scripts comunicates with winrt's API and gets infos about the media currently playing.<br>
-The HTML file then listens to that websockets and displays the title and artist of the media playing.<br>
-Most of the HTML/JS were made using AI so it need lots of improvement that i'll add overtime if i find the time!</p>
+## Screenshots
 
-Here's how it looks when title / artist size is short enough for it to be static :
+### Shorter Titles
 
-![Example Screenshot](Readme-assets/example1.png "Example")
+![Static Example](Readme-assets/example1.png)
 
-## How to use 
+### Longer Titless
 
-1. Download latest release
-   
-   ![Download Screenshot](Readme-assets/Screenshot_9.png "Download")
+![Scrolling Example](Readme-assets/audiostat.gif)
 
-2. Unzip file
-   
-   ![Unzip Screenshot](Readme-assets/Screenshot_1.png "Unzip")
+## How to Use
 
-3. Add new source in OBS
-   
-   ![Add Source Screenshot](Readme-assets/Screenshot_2.png "Add Source")
+### Step 1: Download and Extract
 
-4. Select browser
-   
-   ![Select Browser Screenshot](Readme-assets/Screenshot_3.png "Select Browser")
+Download the latest release from the [releases page](https://github.com/yourusername/audiostats/releases).
 
-5. Put file link and browser size (I recommend W:200 H:50 for browser size)
-   
-   ![Browser Settings Screenshot](Readme-assets/Screenshot_4.png "Browser Settings")
+![Download Screenshot](Readme-assets/Screenshot_9.png)
 
-6. Run audiostat.exe
-   
-   ![Run Program Screenshot](Readme-assets/Screenshot_5.png "Run Program")
+Extract the ZIP file to a folder of your choice.
 
-7. Windows Defender will probably flag it, here's the bypass:
-   
-   ![Defender Warning Screenshot](Readme-assets/Screenshot_6.png "Defender Warning")
-   
-   ![Defender Bypass Screenshot](Readme-assets/Screenshot_7.png "Defender Bypass")
+![Unzip Screenshot](Readme-assets/Screenshot_1.png)
 
-8. This should be what you see when you run the program (different title and artist OBVIOUSLY). Now if you play a new media, the OBS source should display the name and the artist.
-   
-   ![Program Running Screenshot](Readme-assets/Screenshot_8.png "Program Running")
-   
-   
+### Step 2: Add to OBS
 
-   
-## Requirements to modify the program
+Open OBS Studio and add a new source by clicking the **+** button in the Sources panel.
 
-The program runs with python 3.9.x it wont work with another version and the ".exe" is compiled with Pyinstaller
+![Add Source Screenshot](Readme-assets/Screenshot_2.png)
 
-here's a list of all libraries used :
+Select **Browser** from the list.
 
-- winrt (```1.0.21033.1``` is the version I use)
-- websockets (```11.0.3``` is the version I use)
-- asyncio (came with my conda environement, don't think it needs/should be installed with pip)
-- json (came with my conda environement, don't think it needs/should be installed with pip)
+![Select Browser Screenshot](Readme-assets/Screenshot_3.png)
 
-## More
+### Step 3: Configure Browser Source
 
-Feel free to help improve the project !
-If you have requests I might be able to help, keep in mind that I'm not good at this though !
+- check Local File 
+- Click **Browse** and select the `audiostats.html` file 
+- I personally Set the width to **200** and height to **50**
+
+![Browser Settings Screenshot](Readme-assets/Screenshot_4.png)
+
+### Step 4: Run the Application
+
+Navigate to the extracted folder and run `audiostat.exe`.
+
+![Run Program Screenshot](Readme-assets/Screenshot_5.png)
+
+**Important:** Windows Defender may flag the executable. This is a common false positive with PyInstaller-compiled applications.
+
+To allow the program to run:
+
+1. Click **More info**
+
+![Defender Warning Screenshot](Readme-assets/Screenshot_6.png)
+
+2. Click **Run anyway**
+
+![Defender Bypass Screenshot](Readme-assets/Screenshot_7.png)
+
+### Step 5: It now works ! 
+
+You should see a console window displaying the current media information. The OBS overlay will now update automatically when you play a new media.
+
+![Program Running Screenshot](Readme-assets/Screenshot_8.png)
+
+##  Development Setup
+
+### Requirements
+
+- **Python 3.9.x** (Required - other versions are not compatible due to WinRT dependencies)
+- Windows 10 or later
+
+### Dependencies
+
+Install the required Python packages:
+
+```bash
+pip install winrt==1.0.21033.1
+pip install websockets==11.0.3
+```
+**OR**
+```bash
+pip install -r src/requirements.txt
+```
+
+Built-in modules (I think no installation is needed):
+- `asyncio`
+- `json`
 
 ---
 
-*This project is licensed under the GPL-3.0 License - see the LICENSE file for details.*
+This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) file for details.
 
+**Questions or Issues?** Open an issue on GitHub !
 
-*Last updated: 10/21/2025*
 
 
 
